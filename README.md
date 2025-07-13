@@ -1,7 +1,16 @@
 # Java + TestNG Automation Framework (HR Portal Sample)
 
 
-This repository showcases an automated testing framework using Java, Selenium WebDriver, TestNG, and Maven. It reflects best practices for reusable test structure, reporting, and test suite management.
+This is a Maven-based TestNG automation framework using Java and Selenium WebDriver. It demonstrates test design with Page Object Model (POM), utility classes, custom listeners, and ExtentReports integration.
+
+## ✅ Features Covered
+- Page Object Model
+- Login & Add Employee scenarios
+- Assertions (Soft and Hard)
+- Data-driven testing with DataProvider
+- Grouping, prioritization and dependencies
+- ExtentReports HTML generation
+- Clean test structure for maintainability
 
 ## 🔧 Technologies Used
 - Java 17+
@@ -26,20 +35,17 @@ Other folders:
 - `test-output/` → Generated reports (ExtentReports)
 - `testng.xml` → Main test suite runner
 
-## ✅ Key Features
-- Login and Add Employee test flow
-- Soft and Hard Assertions
-- Grouping, Priority, Dependencies
-- DataProvider usage
-- ExtentReports with Listener integration
 
 ## 🧪 How to Run
 1. Clone this repo
 2. Run any suite file (`testng.xml`, `addEmp.xml`, etc.) from Eclipse or terminal
 3. Open `test-output/ExtentReport.html` for detailed test results
 
-## 📸 Example Report
-_Add a screenshot here if desired for recruiter visibility_
+## 📸 Sample Test Report
+
+![ExtentReport](screenshots/extent_report_sample.png)
+
+
 
 
 

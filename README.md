@@ -41,9 +41,11 @@ Other folders:
 2. Run any suite file (`testng.xml`, `addEmp.xml`, etc.) from Eclipse or terminal
 3. Open `test-output/ExtentReport.html` for detailed test results
 
-## 📸 Sample Test Report
+## 📸 Sample Test Screenshot – Add Employee
 
-![ExtentReport](screenshots/extent_report_sample.png)
+This screenshot shows the result of a successful test case for adding an employee in the OrangeHRM demo application using Selenium and TestNG.
+
+![Add Employee Test](https://github.com/Ayesha-sys-QA/TestNGFramework/blob/main/screenshots/passed/addEmployee2025-07-11_21-46-42.png)
 
 
 

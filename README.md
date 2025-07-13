@@ -1,4 +1,5 @@
-# TestNG Automation Framework
+# Java + TestNG Automation Framework (HR Portal Sample)
+
 
 This repository showcases an automated testing framework using Java, Selenium WebDriver, TestNG, and Maven. It reflects best practices for reusable test structure, reporting, and test suite management.
 

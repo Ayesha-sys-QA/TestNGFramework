@@ -1,5 +1,6 @@
 package com.neotech.utils;
 
+
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -70,7 +71,8 @@ public class ExcelUtility {
 	 */
 	private static String cellData(int rowIndex, int colIndex)
 	{
-		return sheet.getRow(rowIndex).getCell(colIndex).toString();
+	   
+	    return sheet.getRow(rowIndex).getCell(colIndex).toString();
 	}
 	
 	
@@ -95,6 +97,7 @@ public class ExcelUtility {
 		
 		//fill out the array by using a nested for loop to go through all the elements....
 		
+		
 		Object[][] data = new Object[rowNumber - 1][colNumber]; //I dont need to get the header
 		
 		for(int row = 1; row < rowNumber; row++)
@@ -109,9 +112,12 @@ public class ExcelUtility {
 			
 		}
 		
-		return data;
 		
+		return data;
+		}
 	}
 	
 
-}
+
+
+

@@ -2,7 +2,9 @@ package com.neotech.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -237,6 +239,13 @@ public class CommonMethods extends BaseClass {
 		return getWaitObject().until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 
+	
+	public static void waitForVisibility(WebElement element) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constants.EXPLICIT_WAIT_TIME));
+	    wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	
 	/**
 	 * This method waits until the provided element is clickable in page.
 	 * 
@@ -328,17 +337,31 @@ public class CommonMethods extends BaseClass {
 	 * 
 	 * @param fileName
 	 */
-	public static void takeScreenshot(String fileName)
+	public static String takeScreenshot(String fileName)
 	{
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		
+		String destination = Constants.SCREENSHOT_FILEPATH + fileName + getTimeStamp() + ".png";
+
 		try {
-			Files.copy(source, new File("screenshots/" + fileName +".png"));
+			Files.copy(source, new File(destination));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		return destination;
 	}
 	
+	
+	
+	public static String getTimeStamp() {
+		Date date = new Date();
+
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+
+		return sdf.format(date);
+	}
+
 }

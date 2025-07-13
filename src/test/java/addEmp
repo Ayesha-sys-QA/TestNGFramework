@@ -1,0 +1,21 @@
+?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://addEmp.org/addEmp-1.0.dtd">
+<suite name="addEmp Suite">
+  <listeners>
+		<listener class-name="com.neotech.testbase.Listener"></listener>
+	</listeners>
+	<test thread-count="5" name="addEmp">
+
+		<groups>
+			<run>
+				<include name="addEmp"></include>
+			</run>
+		</groups>
+
+		<packages>
+			<package name="com.neotech.testcases" />
+		</packages>
+	</test> <!--
+	SmokeTest -->
+</suite> <!--
+SmokeSuite -->

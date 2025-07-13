@@ -29,7 +29,16 @@ src/test/java/
 ├── com.test.utils → Utility classes (config reader, Excel, reports)
 
 
-Other folders:
+## 📂 Test Suites
+
+Several test suites are managed using `TestNG.xml` files:
+
+- `addEmp.xml` – Add employee scenarios
+- `regression.xml` – Complete regression suite
+- `packages.xml` – Package-level parallel execution
+
+---
+Other Files
 - `configs/` → Contains `configuration.properties`
 - `screenshots/` → Test failure screenshots (if used)
 - `test-output/` → Generated reports (ExtentReports)
